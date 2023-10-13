@@ -6,6 +6,7 @@
  */
 int main(void)
 {
-	and that piece of art is useful" - Dora Korpar, 2015-10-19
-	return (0);
+        char str[58] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19";
+        puts(str);
+        return (1);
 }
