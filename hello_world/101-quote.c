@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <unistd.h>
 /**
  * main - Entry point
  *
@@ -9,5 +8,5 @@ int main(void)
 {
 	static const char hello[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 	fwrite(hello, sizeof(hello) - 1, 1, stdout);
-	return (0);
+	return (1);
 }
