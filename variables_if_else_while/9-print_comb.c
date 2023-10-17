@@ -7,15 +7,16 @@
 int main(void)
 {
 	int nr;
-	short a = ',';
-	int nr2 = '9';
 
-	for (nr = '0'; nr <= '8'; nr++)
+	for (nr = '0'; nr <= '9'; nr++)
 	{
+		if ('0' < nr && nr <= '9')
+		{
+			putchar(',');
+			putchar(' ');
+		}
 		putchar(nr);
-		putchar(a);
 	}
-	putchar(nr2);
 	putchar('\n');
 	return (0);
 }
