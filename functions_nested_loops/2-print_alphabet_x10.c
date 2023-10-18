@@ -1,18 +1,21 @@
 #include "main.h"
 
 /**
- * print_alphabet - Entry point
+ * print_alphabet_x10 - Entry point
  * Return:0
  */
 
 void print_alphabet_x10(void)
 {
 	char ch;
+	int i;
 
-	for (ch = 'a'; ch <= 'z'; ch++)
+	for (i = 0 ; i < 10; i++)
 	{
-		for (ch = 0; ch < 10; ch++)
+		for (ch = 'a'; ch <= 'z'; ch++)
+		{
 			_putchar(ch);
-        }
-        _putchar('\n');
+		}
+		_putchar('\n');
+	}
 }
