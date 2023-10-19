@@ -1,10 +1,8 @@
 #include "main.h"
 
 /**
- * mul - Multiplies two integers
- * @a: get character a
- * @b: get character b
- * Return: result of integers
+ * print_numbers - Print numbers
+ * Return: numbers from 1 to 9
  */
 void print_numbers(void)
 {
