@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * _isdigit - check for digits
- * @c: check character
- * Return:1 for digits and 0 for otherwise
+ * mul - Multiplies two integers
+ * @a: get character a
+ * @b: get character b
+ * Return: result of integers
  */
 int mul(int a, int b)
 {
