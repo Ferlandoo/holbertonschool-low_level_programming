@@ -1,9 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_array - print array with comman and space
- * @a: input array
- * @n: lenght of the array
+ * _strcpy - copy the content of one variable to another
+ * @dest: this is destination
+ * @src: this is copy
+ * Return: get the copy
  */
 char *_strcpy(char *dest, char *src)
 {
