@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * *_memset - fills memory with a emory area
+ * *_memcpy - fills memory with a emory area
  * @dest: memory area to be filled
  * @src: memory area to copy
  * @n: number of times to copy src
