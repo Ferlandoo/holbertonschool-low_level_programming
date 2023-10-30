@@ -8,14 +8,10 @@
  */
 void _print_rev_recursion(char *s)
 {
-	int i;
-	int len;
-
-	len = strlen(s);
-
-	for(i = len - 1; i >= 0; i--)
+	if (*s == '\0')
 	{
-		printf("%c", s[i]);
+		return;
 	}
-	return;
+	_print_rev_recursion(s + 1);
+	_putchar(*s);
 }
