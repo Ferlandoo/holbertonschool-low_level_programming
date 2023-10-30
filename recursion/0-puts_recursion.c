@@ -2,7 +2,7 @@
 /**
  * _puts_recursion - prints a string followed by a new line
  * @s: input
- * Return: 0 for last char with new line and other for characters
+ * Return: for last char with new line and other for characters
  */
 void _puts_recursion(char *s)
 {
