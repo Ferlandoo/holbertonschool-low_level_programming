@@ -1,21 +1,26 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * _pow_recursion - return the value of x raised to the power of y
- * @x: value to raise
- * @y: power
- * Return: -1 for y 0 and other result of the power
+ * _sqrt_recursion - natural sqaure root for number that have one
+ * @n: input
+ * Return: - -1 if not have a natural square, n if n is 0 or 1
+ * and i if has a natural square root
  */
-int _pow_recursion(int x, int y)
+int _sqrt_recursion(int n)
 {
-	if (y < 0)
+	if (n < 0)
 	{
 		return (-1);
 	}
-	else if (y == 0)
+	else if (n == 0 || n == 1)
 	{
-		return (1);
+		return (n);
 	}
 	else
-		return (x * _pow_recursion(x, y - 1));
+		for (int i = 1; i <= n / 2; i++)
+		{
+			if (i * i == n)
+				return (i);
+		}
+	return (-1);
 }
