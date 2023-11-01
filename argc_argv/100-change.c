@@ -10,8 +10,7 @@
 
 int main(int argc, char *argv[])
 {
-	int i, j;
-	int res = 0;
+	int i, res = 0;
 	int nr = atoi(argv[1]);
 	int cents[5] = {25, 10, 5, 2, 1};
 
