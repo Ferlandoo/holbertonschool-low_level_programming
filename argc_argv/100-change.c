@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
 	int nr = atoi(argv[1]);
 	int cents[5] = {25, 10, 5, 2, 1};
 
-	if (argc != 2)
+	if (argc == 0)
 	{
 		printf("Error\n");
 		return (1);
@@ -24,7 +24,6 @@ int main(int argc, char *argv[])
 		printf("0\n");
 		return (0);
 	}
-	else
 	for (i = 0; i < 5; i++)
 	{
 		while (nr >= cents[i])
