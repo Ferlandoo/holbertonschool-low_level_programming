@@ -3,12 +3,11 @@
 #include <stdlib.h>
 #include <string.h>
 
-/*
- * *_strdup - contain a copy of the string
- * @str: string to be dublicated
- * @len: length of str
- * Return: char pointer to malloc created memory address
- * or NULL if error
+/**
+ * _strdup - duplicate a string
+ * @str: string to be duplicated.
+ * Return: pointer to the duplicated string, or NULL if insufficient memory
+ * was available.
  */
 
 char *_strdup(char *str)
