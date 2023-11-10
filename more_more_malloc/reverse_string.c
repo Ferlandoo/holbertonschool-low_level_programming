@@ -5,13 +5,15 @@
 
 char* reverseString(const char* str)
 {
-    size_t len = strlen(str);
+    int len = strlen(str);
+    int i;
     char* reversed_str = malloc(len + 1);
+    
     if (reversed_str == NULL)
     {
         return NULL;
     }
-    for (size_t i = 0; i < len; i++)
+    for (i = 0; i < len; i++)
     {
         reversed_str[i] = str[len - i - 1];
     }
