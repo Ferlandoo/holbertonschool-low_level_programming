@@ -19,9 +19,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (sec_dog == NULL || sec_name == NULL || sec_owner == NULL)
 	{
-		free(sec_dog);
-		free(sec_name);
-		free(sec_owner);
 		return (NULL);
 	}
 	strcpy(sec_name, name);
