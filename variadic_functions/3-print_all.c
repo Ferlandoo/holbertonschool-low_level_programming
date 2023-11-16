@@ -28,11 +28,13 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(lista, char *);
 				if(str == NULL)
+                                {
+                                        printf("(nil)");
+                                }
+				if(str)
 				{
-					printf("(nil)");
-				}
-				else
 					printf("%s", str);
+				}
 				break;
 		}
 		i++;
