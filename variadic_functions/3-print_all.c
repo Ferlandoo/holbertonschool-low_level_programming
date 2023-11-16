@@ -14,9 +14,26 @@ void print_all(const char * const format, ...)
 	va_start(lista, format);
 	while (i < strlen(format))
 	{
-		if (format[i] == 'c' || format[i] == 'i' || format[i] == 'f' || format[i] == 's')
+		switch(format[i])
 		{
-		(Coming Soon)
+			case 'c':
+				printf("%c, ", va_arg(lista, int));
+				break;
+			case 'i':
+				printf("%d, ", va_arg(lista, int));
+				break;
+			case 'f':
+				printf("%f, ", va_arg(lista, double));
+				break;
+			case 's':
+				str = va_arg(lista, char *);
+				if(str == NULL)
+				{
+					printf("(nil)");
+				}
+				else
+					printf("%s", str);
+				break;
 		}
 		i++;
 	}
