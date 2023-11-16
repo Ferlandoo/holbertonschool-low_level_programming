@@ -14,7 +14,7 @@ void print_all(const char * const format, ...)
 	va_start(lista, format);
 	while (i < strlen(format))
 	{
-		switch(format[i])
+		switch (format[i])
 		{
 			case 'c':
 				printf("%c, ", va_arg(lista, int));
@@ -27,19 +27,26 @@ void print_all(const char * const format, ...)
 				break;
 			case 's':
 				str = va_arg(lista, char *);
-				if(str == NULL)
-                                {
-                                        printf("(nil)");
+				if (str == NULL)
+				{
+					printf("(nil)");
 					break;
-                                }
-				if(str)
+				}
+				if (str)
 				{
 					printf("%s", str);
 				}
 				break;
+			default:
+				i++;
+				continue;
+		}
+		if (i < size - 1)
+		{
+			printf(", ");
 		}
 		i++;
 	}
-	printf("\n");
-	va_end(lista);
+	printf ("\n");
+	va_end (lista);
 }
