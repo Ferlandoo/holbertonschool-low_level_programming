@@ -33,10 +33,7 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				if (str)
-				{
-					printf("%s", str);
-				}
+				printf("%s", str);
 				break;
 			default:
 				i++;
