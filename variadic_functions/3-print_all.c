@@ -9,10 +9,11 @@ void print_all(const char * const format, ...)
 {
 	va_list lista;
 	int i = 0;
-	char *str, *sep="";
+	char *str, *sep = "";
 	int size = strlen(format);
 
 	va_start(lista, format);
+	if (format)
 	while (i < size)
 	{
 		switch (format[i])
@@ -39,9 +40,10 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-		sep=", ";
+		sep = ", ";
 		i++;
 	}
-	printf ("\n");
-	va_end (lista);
+	}
+	printf("\n");
+	va_end(lista);
 }
