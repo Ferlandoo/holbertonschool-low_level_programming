@@ -11,7 +11,7 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char *str;
 
-	int size = strlen(format);
+	unsigned int size = strlen(format);
 	va_start(lista, format);
 	while (i < size)
 	{
