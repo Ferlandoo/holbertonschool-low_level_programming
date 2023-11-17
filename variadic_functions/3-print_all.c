@@ -8,9 +8,9 @@
 void print_all(const char * const format, ...)
 {
 	va_list lista;
-	unsigned int i = 0;
+	int i = 0;
 	char *str, *sep="";
-	unsigned int size = strlen(format);
+	int size = strlen(format);
 
 	va_start(lista, format);
 	while (i < size)
