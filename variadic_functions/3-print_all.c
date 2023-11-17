@@ -9,22 +9,22 @@ void print_all(const char * const format, ...)
 {
 	va_list lista;
 	unsigned int i = 0;
-	char *str;
-
+	char *str, *sep="";
 	unsigned int size = strlen(format);
+
 	va_start(lista, format);
 	while (i < size)
 	{
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c, ", va_arg(lista, int));
+				printf("%s%c, ", sep, va_arg(lista, int));
 				break;
 			case 'i':
-				printf("%d, ", va_arg(lista, int));
+				printf("%s%d, ", sep, va_arg(lista, int));
 				break;
 			case 'f':
-				printf("%f, ", va_arg(lista, double));
+				printf("%s%f, ", sep, va_arg(lista, double));
 				break;
 			case 's':
 				str = va_arg(lista, char *);
@@ -33,16 +33,13 @@ void print_all(const char * const format, ...)
 					printf("(nil)");
 					break;
 				}
-				printf("%s", str);
+				printf("%s%s", sep, str);
 				break;
 			default:
 				i++;
 				continue;
 		}
-		if (i < size - 1)
-		{
-			printf(", ");
-		}
+		sep=", ";
 		i++;
 	}
 	printf ("\n");
