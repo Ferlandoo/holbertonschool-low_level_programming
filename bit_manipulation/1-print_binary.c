@@ -2,18 +2,29 @@
 #include <stdio.h>
 
 /**
- * print_binary - prints the binary representation of a number
- * @n: number to print
+ * print_binary - Prints the binary representation of an unsigned long integer.
+ * @n: The number to convert and print.
  * Return: void
  */
 
 void print_binary(unsigned long int n)
 {
-	if ((n >> 1) == 0)
+	unsigned long int mask = 1UL << ((sizeof(unsigned long int) * 8) - 1);
+	int flag = 0;
+
+	while (mask)
 	{
-		_putchar('0' + (n & 1));
+		if (n & mask)
+		{
+			_putchar('1');
+			flag = 1;
+		}
+		else if (flag)
+			_putchar('0');
+
+		mask >>= 1;
 	}
-	else
-		print_binary(n >> 1);
-	_putchar('0' + (n & 1));
+
+	if (!flag)
+		_putchar('0');
 }
