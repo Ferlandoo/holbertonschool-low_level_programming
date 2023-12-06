@@ -66,7 +66,6 @@ void cp(char *file_from, char *file_to)
 		exit(98);
 	}
 	close(file_src);
-	close(file_dest);
 }
 
 /**
