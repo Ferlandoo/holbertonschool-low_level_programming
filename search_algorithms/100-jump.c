@@ -16,20 +16,34 @@ int jump_search(int *array, size_t size, int value)
     
 	if(array == NULL)
 		return (-1);
-    while(array[end] < value && end < size)
+    while(end < size && array[end] < value)
 	{
-		printf("Value checked array[%lu] = [%d]\n", end, array[end]);
-        start = end;
-        end = end + sqrt(size);
-    }
+		printf("Value checked array[%lu] = [%d]\n", start, array[start]);
+		start = end;
+		end += sqrt(size);
+	}
+	printf("Value checked array[%lu] = [%d]\n", start, array[start]);
 	printf("Value found between indexes [%lu] and [%lu]\n", start, end);
-    if(end >= size - 1)
-		end = size - 1;
-	for(start = 0; start <= end; start++)
-	{ 
-    	printf("Value checked array[%lu] = [%d]\n", start, array[start]);
+	while(start <= min(end, size - 1))
+	{
+		printf("Value checked array[%lu] = [%d]\n", start, array[start]);
 		if(array[start] == value)
-        	return (start); 
+			return (start);
+		start++;
 	}
 	return (-1);
+}
+
+/**
+ * min - returns the minimum of two numbers
+ * @a: first number
+ * @b: second number
+ * Return: the minimum of a and b
+ */
+
+size_t min(size_t a, size_t b)
+{
+	if (a < b)
+		return (a);
+	return (b);
 }
